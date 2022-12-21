@@ -1,0 +1,415 @@
+// 1. Declare four variables without assigning values and print them in console
+let var1;
+let var2;
+let var3;
+let var4;
+
+//2. How to get value of the variable myvar as output
+var myvar= 1;
+console.log("myvar"); // this statement is incorrect as it console the string of variable name and not the actual variable value
+// correct statement would be
+console.log(myvar);
+
+// 3. Declare variables to store your first name, last name, marital status, country and age in multiple lines
+var firstName;
+var lastName;
+var maritalStatus;
+var country;
+var age;
+
+// 4. Declare variables to store your first name, last name, marital status, country and age in a single line
+var firstName1, lastName1, maritalStatus1, country1, age1;
+
+// 5. Declare variables and assign string, boolean, undefined and null data types
+var dataTypeStr = "string";
+var dataTypeBoolean = true;
+var dataTypeBoolean1 =false;
+var dataTypeUndefined = undefined;
+var dataTypeNull = null;
+
+// 6. Convert the string to integer
+var str = ("2022")
+var number = parse.int(str);
+
+// 7. Write 6 statement which provide truthy & falsey values.
+1 == '1';
+1 == [1];
+'1' == [1];
+1 === '1';
+1 === [1];
+'1' === [1];
+
+// Task 3: Simple Programs todo for Condition , Looping and Arrays
+
+// Task 2: Simple Programs todo for Operators
+    // Square of a number
+    var num=2;
+    var numberToBeSquare = function (number) {
+        return number*number;
+    }
+    
+    console.log(numberToBeSquare(num));
+
+// Swapping 2 numbers
+
+let firstNum = 2;
+let secondNum = 3;
+
+var swapNumbers = function (fNum, sNum) {
+    let temp;
+
+    temp = fNum;
+    fNum = sNum;
+    sNum = temp;
+
+    console.log (`The value of a after swapping: ${fNum}`);
+    console.log (`The value of b after swapping: ${sNum}`);
+}
+
+swapNumbers(firstNum, secondNum);
+
+// Addition of 3 numbers
+
+let num1 = 1;
+let num2 = 2;
+let num3 = 3;
+
+var addition = (num1, num2, num3) => {
+        sum = num1 + num2 + num3;
+        return sum;
+}
+
+console.log(addition(num1, num2, num3));
+
+// Celsius to Fahrenheit conversion
+
+var tempInC = 28;
+var tempInF;
+
+var convertToFahrenheit = function (Celcius){
+
+    tempInF = (Celcius*9/5) + 32;
+    return tempInF;
+}
+
+console.log(convertToFahrenheit(tempInC));
+
+// Meter to miles
+
+var meterUnit = 1;
+
+function getMiles(meters) {
+    return meters*0.000621371192;
+}
+
+console.log(getMiles(meterUnit));
+
+// Pounds to kg
+
+var poundsUnits = 2;
+
+function getKg(pounds){
+    return pounds/2.205;
+}
+
+console.log(getKg(poundsUnits));
+
+// Calculate Batting Average
+
+var runs=50;
+var timesOut =3;
+
+function getBattringAvg(r, o) {
+    return r/o;
+}
+
+console.log(getBattringAvg(runs, timesOut));
+
+
+// 1. Write a loop that makes seven calls to console.log to output the following triangle:
+
+for(var line = "#" ; line.length < 8 ;line += "#") {
+    console.log(line)
+    }
+
+// 2. Iterate through the string array and print it contents
+
+var strArray= ["<option>Jazz</option>",
+      ,"<option>Blues</option>",
+      ,"<option>New Age</option>",
+      ,"<option>Classical</option>",
+      ,"<option>Opera</option>"]
+
+for (i in strArray) {
+    console.log(strArray[i]);
+}
+
+// var myarray=[11,22,33,44,55]
+// write a code to count the elements in the array . Don’t use length property
+// Declare an empty array;
+
+var myarray1=[11,22,33,44,55]
+
+var count=0;
+for (var i of myarray1) {
+count+=1;
+}
+
+console.log(count);
+
+// Create an array called foods holds the names of your top 20 favorite foods, starting with the best food.
+
+let foods=["samosa","noodle",
+"dumplings","egg-rolls",
+"biryani","dosa",
+"idli","vada-pav",
+"kachori","roti","bitter-gourde",
+"chicken-curry","KFC",
+"Burger","Fries",
+"Coke","popcorn"
+,"nachos","cakes",
+"pani-puri"]
+
+// Foods variable holds the names of your top 20 favorite foods, starting with the best food. How can you find your fifth favorite food?
+
+function findNthElement( arr, n) {
+    return arr[n-1];
+}
+
+console.log(findNthElement(foods,5));
+
+// Starting from the existing friends variable below, change the element that is currently “Mari” to “Munnabai”.
+
+let friends1 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran"];
+
+function dataHandlingChange(input){
+for (var i = 0; i < input.length; i++) {
+if (input[i] = "Mari"){
+    input[i] = "Munnabai";
+}
+return input;
+}
+}
+
+console.log (dataHandlingChange(friends1));
+
+// Starting from the friends variable below, Loop and Print the names till you meet CaptianAmerica.
+
+const friends2 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran"];
+
+
+function dataHandlingPrint(input){
+for (var i = 0; i <= input.indexOf("CaptianAmerica"); i++) {
+
+    console.log (input[i]);
+
+}
+}
+
+dataHandlingPrint(friends2);
+
+// Find the person is ur friend or not.
+
+const friends3 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran"];
+
+function dataHandlingFind(input, name){
+for (var i = 0; i < input.length; i++) {
+
+    if (input[i].toLowerCase() == name.toLowerCase()){
+        return `${name} is a friend`;
+    }
+}
+}
+
+let found = dataHandlingFind(friends3,"Jeff");
+
+console.log(found);
+
+
+// We have two lists of friends below. Use array methods to combine them into one alphabetically-sorted list.
+
+var friendsA = [
+"Mari",
+"MaryJane",
+"CaptianAmerica",
+"Munnabai",
+"Jeff",
+"AAK chandran"
+];
+
+var friendsB = [
+"Gabbar",
+"Rajinikanth",
+"Mass",
+"Spiderman",
+"Jeff",
+"ET"
+];
+
+function dataHandling(input){
+
+    let allFriends= friends1.concat(friends2);
+
+    allFriends.sort();
+
+      console.log(allFriends);
+
+}
+
+dataHandling(friendsA, friendsB);
+
+//1. Get the first item, the middle item and the last item of the array
+
+const friends4 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar"];
+
+var firstItem = friends[0];
+var middleItem = friends[(friends.length - 1)/2]
+var lastItem = friends[(friends.length -1)]
+console.log(firstItem, middleItem, lastItem);
+
+// 2. Add your name to the end of the friends array, and add another name to beginning.
+
+var friends5 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar"];
+friends.splice(friends.length, 0, 'Neeraj')
+friends.splice(0, 0,'Dylan');
+console.log(friends);
+
+// 3. Add Mr or Ms to the names in the friends array.
+
+var friends5 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar"];
+friends = friends5.map(i => 'Mr.' + i);
+console.log(friends);
+
+// 4. Concat all the names the friends array and return as comma “,” seperated string.
+
+var friendsJoin = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar"];
+friendsJoin = friendsJoin.join(',');
+console.log(friendsJoin);
+
+// 5. Find the friends names who has letter ‘a’ and return the list.
+var friends6 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar", "Jeet", "Geet", "Robert"]
+
+var friendsWithA = friends6.filter(name => {
+    if (name.includes('a')) {
+        return true;
+    }
+});
+
+console.log(friendsWithA);
+
+
+// 6. Find the avg length of all the friends names. Get the individual length of the names and do the avg.
+
+var friendsAvg = ["Mari","MaryJane","CaptianAmerica","Munnabai", "Jeff","AAK chandran", "Gabbar", "Jeet", "Geet", "Robert", "Reet"]
+
+var total = 0;
+
+for (var i in friendsAvg) {
+    total += friendsAvg[i].length;
+}
+
+avgLength = total / friendsAvg.length;
+console.log(avgLength);
+
+// 7. Find the names and return the list starting with letter M.
+
+var friends7 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar", "Jeet", "Geet", "Robert"]
+
+var friendsWithInitialM = friends7.filter(name => {
+    if (name[0] =='M') {
+        return true;
+    }
+});
+
+console.log(friendsWithInitialM);
+
+// 8. Find the name with max characters and return the name.
+
+var friends8 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran", "Gabbar", "Jeet", "Geet", "Robert"]
+    let longestName ='';
+
+friends8.forEach(name => {
+    if(name.length>longestName.length) {
+        longestName = name;
+    }
+            return longestName;
+});
+
+console.log(longestName);
+
+// 9. Find the name with min characters and return the name.
+
+var friends9 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAK chandran"];
+    let shortestName ='friends[0]';
+
+friends9.forEach(name => {
+    if(name.length<shortestName.length) {
+        shortestName = name;
+    }
+            return shortestName;
+});
+
+console.log(shortestName);
+
+// Find the average in the array below.
+// Make sure you add only the numbers and do avg.
+
+const friendsInfo = [6, 12, 'Mari', 1, true, 'Munnabai', '200', 'CaptianAmerica', 8, 10];
+ var total= 0;
+for (var i of friendsInfo) {
+    if (typeof i === 'number'){
+        total += i; 
+    }
+}
+let avg = total/friendsInfo.length;
+console.log(avg);
+
+
+// Print the contents of the input variable
+
+var input = [
+["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
+]
+
+function dataHandlingPrint(input){
+
+    for (var i = 0; i < input.length; i++){
+    console.log(input[i]);
+    }
+}
+
+dataHandlingPrint(input);
+
+// What the output
+
+myobject = {"1":"one", "11":"1", "name":"arun"}
+
+console.log(myobject[11]); // output is 1
+console.log(myobject.name); // output is arun
+
+// Add a new key value pair to myobject
+
+// key : ten
+// value : ten
+
+myobject = {"1":"one","11":1,"name":"arun"}
+
+//your code goes here
+myobject["ten"] = "ten";
+
+console.log(myobject);
+
+// {"1":"one","11":1,"name":"arun","ten":"ten"} 
+// Quotes might not get displayed that fine.
+
+// Write out an object literal to represent the data below.
+// Guvi, Geek, 6, IIT-M RP,Chennai.
+
+var firstName = "Guvi";
+var lastName = "Geek";
+var address = "6, IIT-M RP,Chennai";
+
+console.log (`${firstName}, ${lastName}, ${address}`);
